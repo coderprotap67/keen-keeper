@@ -1,15 +1,27 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { createBrowserRouter, RouterProvider } from "react-router";
+
 import MainLayout from "./layout/MainLayout";
+
 import HomePage from "./pages/HomePage";
+
 import TimeLine from "./pages/TimeLine";
+
+
 import Stats from "./pages/Stats";
+
 import TabProvider from "./context/CurrentTabContext";
+
+
 import FriendDetails from "./pages/FriendDetails";
+
 import TimeLineProvider from "./context/TimeLineContext";
+
 import { ToastContainer } from "react-toastify";
+
 import Error from "./pages/Error";
 
 const rounter = createBrowserRouter([
