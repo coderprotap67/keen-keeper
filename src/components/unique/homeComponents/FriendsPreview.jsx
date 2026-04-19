@@ -2,15 +2,16 @@ import { useContext } from "react";
 import { Link } from "react-router";
 import { TabContext } from "../../../context/CurrentTabContext"
 
-export default function FriendsPreview({ friend }) {
-  const status = friend.status.toLowerCase(); // Status check করার সুবিধার্থে lowercase করা হয়েছে
+export default function FriendsPreview({ friend }) 
+{
+  const status = friend.status.toLowerCase();
   const { setCurrTab } = useContext(TabContext)
 
   return (
     <Link 
       to={`/friend/${friend.id}`} 
       onClick={() => setCurrTab("none")} 
-      // bg-white এবং shadow-none ব্যবহার করা হয়েছে
+
       className="card bg-white shadow-none border border-slate-100 px-2 py-6 hover:cursor-pointer transition-colors hover:bg-slate-50"
     >
       <figure>
@@ -21,10 +22,13 @@ export default function FriendsPreview({ friend }) {
         />
       </figure>
       <div className="card-body flex flex-col items-center justify-center text-center p-4">
+
         <h2 className="text-[#1F2937] font-semibold text-xl">{friend.name}</h2>
+
         <p className="text-[#64748B] text-xs font-medium">{friend.days_since_contact}d</p>
         
         <div className="flex flex-col gap-2 mt-2">
+
             <div className="badge bg-[#CBFADB] text-[#244D3F] border-0 rounded-full font-medium text-[10px] px-3 py-2">
               {friend.tags[0].toUpperCase()}
             </div>

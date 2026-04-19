@@ -7,7 +7,9 @@ export default function FriendsContainer({ friends }) {
         Your Friends
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {friends.map((friend) => (
+
+        {friends.map((friend) => 
+        (
           <FriendsPreview key={friend.id} friend={friend}></FriendsPreview>
         ))}
       </div>
