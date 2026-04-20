@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 export default function Error() {
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-base-300 min-h-screen">
 
       <div className="hero-content text-center">
         <div className="max-w-md">
